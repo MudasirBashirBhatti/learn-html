@@ -1,0 +1,602 @@
+﻿<!doctype html>
+<html>
+<head><title>all about forms</title>
+<body>
+
+<marquee><font color="blue"><h1>Learn All About Forms From here</h1><font></marquee>
+<hr>
+
+<!-- Specifies an address (url) where to submit the form (default: the submitting page).It is usually a php file. or the address where the data should be submitted.
+In this example section specifies where to files should be submitted. target="_blank" show where it should open in new tab or existing one. Name shows by which name it will go to php section. name in the form section specifies a unique name for the form. -->
+<font color="red"><h2>form structure with action attribute "form" </h2></font>
+<form action="text.html" target="_blank" name="login form">
+Please input your name: <input type="text" name="UserName">
+<input type="submit" value="Submit form">
+<form>
+<hr>
+
+
+
+<!--With the GET method, the pairs are added to the end of the URL specified in the action attribute, separated by �?,� with the pairs joined using �&.�.By default get option is selected. It is not good for sensitive information.
+It is not suitable for a lot of data, because it supports only 1024 characters. -->
+<font color="red"><h2>form element with get and post attribute</h2></font>
+<p> here we use get attribute in form element</p>
+<form action="text.html" target="_blank" method="get">
+<p>Please input you name: <input type="text" name="UserName"></p>
+<p><input type="submit" value="submit">
+<hr>
+
+
+<!--With the POST method, the pairs are sent via what are called HTTP headers. The pairs are joined in the same way as in the GET method, that is, by
+using �&.� The method is suitable for all the uses described above, for which the GET method is unsuitable. -->
+<p> here we use post attribute in form element</p>
+<form action="text.html" target="_blank" method="post">
+<p>Please input you name: <input type="text" name="UserName"></p>
+<p><input type="submit" value="submit">
+<hr>
+
+
+<!-- Input type="text" is used to add text section in the form. usually it is used for names -->
+<font color="red"><h2>Input type "text"</h2></font>
+<p>Username:<input type="text" name="username"></p>
+<hr>
+
+
+
+<!-- Input type="password" is used to add password section in the form.-->
+<font color="red"><h2>Input type "password"</h2></font>
+<p>Password:<input type="password" name="password"></p>
+<hr>
+
+
+
+<!-- Input type="email" is used to add email section in the form.-->
+<font color="red"><h2>Input type "email"</h2></font>
+<p>Email:<input type="email" name="Email"></p>
+<hr>
+
+
+<!-- Input type="url" displays a single line text box for url-->
+<font color="red"><h2>Input type "url"</h2></font>
+<p>URL:<input type="url" name="URL"></p>
+<hr>
+
+<!-- Dasplays a single line text box for telephone numbers.-->
+<font color="red"><h2>Input type "tel"</h2></font>
+<p>Mobile Number:<input type="tel" name="Contact"></p>
+<hr>
+
+
+<!-- Dasplays a single line text box for search item-->
+<font color="red"><h2>Input type "search"</h2></font>
+<p>Search:<input type="search" name="Search"></p>
+<hr>
+
+<!-- Dasplays a single line text box for telephone numbers.-->
+<font color="red"><h2>Input type "tel"</h2></font>
+<p>Mobile Number:<input type="tel" name="Contact"></p>
+<hr>
+
+<!-- <name> attribute specifes a unique name for element. <value> attribute specifies the fefault value for element.
+     <minlength> specifies the minimum number of characters allowed in a text field. <maxlength> specifies the maximum number of characters allowed in a text field.<placeholder> gives an instruction or an example to user about what to enter in a text filed.
+<pattern> specifies an expression (a format) that user's input must match when used ou should include a title attribute to describe the pattern.-->
+
+
+<font color="red"><h2>"name" "maxlength" "minlength" "placeholder" "value" "pattern" (attributes of text field)</h2></font>
+<form action="text.html" target="_blank">
+<p>password:<input type="password" name="password" minlength="6" maxlength="10" placeholder="Input password" pattern="[A-Za-z]{3}[0-9]{6}[!]{1}" title="Three upper or lower case letters followed by six digits and a special character at the end"></p>
+<input type="submit" value="submit button">
+<hr>
+
+
+
+<!-- <size> attribute specifies the length(in characters) of text-input field.Default is 20. -->
+
+<font color="red"><h2>"size" attributes of text fields.</h2></font>
+<p>Username:<input type="text" name="username" size="10"></p>
+<hr>
+
+
+
+<!-- Readonly specifies whether or not users can edit a text field. -->
+<font color="red"><h2>"readonly" attribute of the input types that display text field.</h2></font>
+<form action="tex.html">
+First name:<input type="text" name="firstname" value="John" readonly>
+</form>
+<hr>
+
+
+<!-- The spellcheck specifies t check element's spelling and grammar.The cpellcheck attribute has two valid values, which are: true(means it defines that the HTML element should be checked for errors). False(It defines that the HTML element should not be checked for errors.)-->
+<font color="red"><h2>"spellcheck" attribute of input type of text field to check mistakes</h2></font>
+Please input your name: <input type="text" spellcheck="true">
+<hr>
+
+
+
+<!-- Specifies the id value on a <datalist> element with which to associate element.The list attribute in HTML is used to identify a list of pre-defined options for an <input> element to suggest the user. the syntax is:<input list="name" where name is a string that will works as id and will be used to define link
+the <input> elemnet with the <datalist> element. -->
+<font color="red"><h2>"list" attribute of input type of text field to define list in text field</h2></font>
+<form>
+<label>Your Cars Name:</label>
+<input list="cars">
+<datalist id="cars">
+<option value="BMW">
+<option value="Audi">
+<option value="Mercedes">
+</datalist>
+</form>
+<hr>
+
+<!-- The required attribute specifies that an input field must be filled out before submitting the form.The required attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio and file.-->
+<font color="red"><h2>"required" attribute of input type of text to make the text necessary to filled out </h2></font>
+<form action="text.html">
+Please input your name: <input type="text" name="username" required>
+<input type="submit" name="submit Please">
+</form>
+<hr>
+
+
+<!-- The disabled attribute specifies that the input field is disabled. A disabled input field is unusable and un-clickable, and its value will not be sent when submitting the form.-->
+<font color="red"><h2>"disabled" attribute of input type of text to disabled field</h2></font>
+<form action="text.html">
+First name: <input type="text" name="firstname" value="John" disabled>
+</form>
+
+
+<!-- The autocomplete attribute specifies whether a form or input field should have autocomplete on or off. When autocomplete is on, the browser automatically completes the input values based on values that the user has entered before.
+it is possible to have autocomplete "on" for the form, and "off" for specific input fields, or vice versa.The autocomplete attribute works with <form> and the following <input> types" text, search, url tel, email, password, datepickers, range, and color.-->
+<font color="red"><h2>"autocomplete" to autocomplete the previous values.</h2></font>
+<form autocomplete="on">
+First name:<input type="text" name="fname"><br>
+Last name:<input type="text" name="lastname" autocomplete="off">
+</form>
+<hr>
+
+
+<!-- Autofocus specifies to give input focus to a form control when a form loads. The autofocus attribute specifies that the input field should automatically get focus when the page loads.-->
+<font color="red"><h2>autofocus to focus on a particular field when page load. </h2> </font> 
+First name:<input typ="text" name="fname" autofocus placeholder="autofocus">
+<hr>
+
+
+
+<!-- All searches in the input:search field are saved into the search history, under the category specified by the autosave attribute. If the autosave attribute of two different search tags contain identical values, the searches belonging to these fields are saved under the same category of the history.
+Use unique category names (for example, the domain where the site is) to avoid the mixing of categories. If the autosave attribute is not defined, then the history dropdown list is invisible, and the searches are not saved in the history -->
+<font color="red"><h2> "autosave attribute of input type of texts </h2> </font>
+<form action="text.html">
+<form method="POST">
+    <input type="search" name="fieldxxx" autosave="unique666" required="true" autocomplete="off"/>
+    <button type="submit">Search</button>
+</form>
+<hr>
+
+
+
+<!-- inputmode specifies which type of input mechanism( typically type of virtual keyboard) to display. It is used to display the type of keyboard that is most useful to the user for entring text into a control. It is especially for touch-screen devices, such as
+mobile phones. Values supported include verbatim, latin, latin-name,latin-prose, full-width-latin, kana, kana-name, katakana, numberic, tel, email and url.each of which displays different type of keyboard.
+Values of the inputmode attribute include:
+verbatim for alphanumeric content,
+latin text content with aids like auto suggest,
+latin-name for names,
+latin-prose text content with more aggressive text entry assistance then simple latin,
+full-width-latin like latin-prose, but for your secondary languages,
+kana full-width Japanese characters, with support for converting to kanji,
+katakana Katakana input, full-width Japanese characters, with support for converting to kanji,
+numeric for numeric input that isn�t a number, like zip codes, credit card numbers, when you want numeric values, but don�t want the GUI of a number spinner,
+tel displays the telephone keyboard, including asterisk and pound key, but should not be used when tel input type makes sense, like for input of a social security number,
+email the email input keyboard when <input type="email"> is not appropriate. For example, for a Twitter app you may want a keyboard that shows @, but you don�t actually want to check for valid email addresses.
+url for URL input keyboard when you don�t actually want an URL, like when you don�t want an URL, but don�t want to force the inclusion of a protocol.
+This attribute is only relevant in browsers on devices that have dynamic keyboards.-->
+<font color="red"><h2> "inputmode" attribute supported by input types that display text fields </h2> </font>
+<p> inputmode attribute is used to change keyboard accordingly</p>
+Please enter you number: <input type="text" name="number" inputmode="numeric">
+<hr>
+
+
+
+<!--The multiple attribute is a boolean attribute. When present, it specifies that the user is allowed to enter/select more than one value.-->
+<font color="red"><h2> "multiple" attribute to select multiple files</h2></font>
+<form action="/action_page.php">
+  Select images: <input type="file" name="img" multiple>
+  <input type="submit">
+</form>
+<hr>
+
+
+
+<!--The min attribute specifies the minimum value for an <input> element. Tip: Use the min attribute together with the max attribute to create a range of legal values.
+Note: The max and min attributes works with the following input types: number, range, date, datetime-local, month, time and week."min" specifies the minimum numeric value allowed. "max" specifies the maximum numeric value allowed. "step" specifies increment and decrement values when a control button is clicked.-->
+<font color="red"><h2>"min" , "max" and "step" attributes supported by input types for collecting numbers</h2></font>
+<label for="datein"> Enter a date b/w 2000-10-25 and 2000-10-30</label>
+<input type="date" name="datein" id="datein" min="2000-10-15" max="2000-10-30" step="2">
+<hr>
+
+<p> "min" "max" and "step" for numbers</p>
+Please input number:<input type="number" name="number" min="0" max="20" step="2">
+<hr>
+
+
+<!-- The <input type="range"> defines a control for entering a number whose exact value is not important (like a slider control).Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the attributes below.
+max - specifies the maximum value allowed   min - specifies the minimum value allowed  step - specifies the legal number intervals  value - Specifies the default value
+Tip: Always add the <label> tag for best accessibility practices!-->
+<font color="red"><h2>"range" attribute of input time</h2></font>
+<p> used simple range attribute</p>
+<label for="points">Points (between 10 and 80):</label>
+<input type="range" name="points id="points" min="10" value="0" max="80" step="5">
+<hr>
+
+
+<font color="red"><h2>"range" attribute of input time</h2></font>
+<form>
+<p> used simple range attribute</p>
+<output name="quantity">0</output>
+<label for="points">What is your choice</label>
+<input type="range" id="points" name="points" min="0" value="0" max="100" step="5"
+ oninput="quantity.value=points.value">
+</form>
+<hr>
+
+
+
+<!-- form range and number input to change range using number or change number using rnage-->
+<form>
+<p>Form "range" and "number" of input type</p>
+<input type="number" name="numberinput" min="0" max="100" value="0" oninput="slidenumber.value=numberinput.value">
+<input type="range" name="slidenumber" min="0" max="100" value="0" oninput="numberinput.value=slidenumber.value"> 
+</form>
+<hr>
+
+
+<!-- time element is used to add time in the websites -->
+<form>
+<font color="red"><h2>"time" attribute of input type to add time</h2></font>
+<p>Please enter time:<input type="time" name="time"></p>
+</form>
+<hr>  
+
+
+<!-- "datetime-local" attribue is intended for setting global date and time including time zone information.However, it is not, as of time of writing, supported by andy major browser.-->
+<font color="red"><h2>"datetime-local" attribute of input type</h2></font>
+<form action="text.html">
+  <p>Please enter the date: <input type="datetime-local" name="localdatetime"></p>
+</form>
+<hr>
+
+
+<!--Month attribute in the form is used to add month section in form.-->
+<font color="red"><h2>"month" attribute of input type</h2></font>
+<form action="text.html">
+  <p>Please enter the month: <input type="month" name="month"></p>
+</form>
+<hr>
+
+
+
+<!-- The week input type is used to add week and year in form. it is also an attribute of input type-->
+<font color="red"><h2>"week" attribute of input type</h2></font>
+<form action="text.html">
+<p>Please input the week: <input type="week" name="week"></p>
+</form>
+
+
+<!-- radio-input type displays a radio button and is used when you wnat users to choose only one from a set of options. Once a button is selected, it cannot be unselected by clicking it. It can onl be unselected by clicking another button. This ensures that only one option can be chosebn as answer to a question, and it the values of the name and value attributes of the chosen option that are used to create the name-value pair. If we change the name then we select also another one -->
+<font color="red"><h2>"radio" attribute of input type</h2></font>
+<form action="text.html">
+<p>Please select your gender: <input type="radio" name="gender">Male
+&nbsp;&nbsp;<input type="radio" name="gender">Female
+&nbsp;&nbsp;<input type="radio" name="gender">Others
+</p>
+</form>
+<hr>
+
+
+<!-- Checked attribute of input type is used to ad check box. the values of the value attributes identify
+the options associated with it. In addition, notice that there is space between each
+box and its label. This is because there is space in the code between each
+<input> element and its label.-->
+<font color="red"><h2>"checkbox" attribute of input type</h2></font>
+<form action="text.html">
+<p>Please select your gender: <input type="checkbox" name="chekcbox" value="Bus" checked>Bus
+&nbsp;&nbsp;<input type="checkbox" name="chekcbox" value="car">Car
+&nbsp;&nbsp;<input type="checkbox" name="chekcbox" value="airplane">Airplane
+</p>
+</form>
+<hr>
+<hr>
+<hr>
+
+
+<!-- "formaction" attribute does the same work as "action" attribute. It specifies the URL for the script to use to process submitted form data.-->
+<font color="red"><h2>"formaction" attribute of submit and reset button</h2></font>
+<form formaction="text.html">
+Enter your name: <input type="text" name="username">
+<input type="submit" value="press to submit">
+</form>
+<hr>
+
+<!-- "formmethod" specifies that the method to use to send form data to server, for example formaction="get". This is the same as using method="get" with the <form>element.-->
+<font color="red"><h2>"formmethod" attribute of submit and reset button</h2></font>
+<p>It does the same work as mehod="get in form</p>
+<form formaction="text.html">
+Enter your name: <input type="text" name="username">
+<input type="submit" value="press to submit" formmethod>
+</form>
+<hr>
+
+
+
+
+<!-- formnovalidate specifies that form is not to be vlidated, for example formnovalidate. This is the same as using novalidate with the <form> element.-->
+<font color="red"><h2> "formnovalidate" attribute of submit and reset button</h2></font>
+<form action="text.html">
+last date:<input type="text">
+<input type="submit" value="submit"  formnovalidate>
+</form>
+<hr>
+
+<!-- These are also the attributes of submit and reset button."name" attribute specifes a unique name for element."value" attribute specifies the default value for element."disabled attribute specifies the disable control, so that user cannot interact with it. It can be specified by itself, without a value (instead of disabled="disabled")."form" attribute specifies the id value of the <form> element with which to associate element.It allows you to place input elemnet anywhere within a document and not just within the form element."autofocus" specifies that element should be given input focus when page is loaded. It can be specifed by itself.-->
+<font color="red"><h2> "name" , "value" , "disabled" , "form" and "autofocus" attributes of submit attribute</h2></font>
+<p> "name" , "value" , "disabled" , "form" and "autofocus" attributes of submit attribute</p>
+<hr>
+<hr>
+<hr>
+<hr>
+
+
+
+<!-- The image-input type allows you to specify an image to be used as a submit button. It supports the same attributes as listed above -->
+<font color="red"><h2>"image" input type in form</h2></font>
+<form action="text.html">
+<p>please enter login details:</p>
+<p>Username:<input type="text" name="uname" required></p>
+<input type="image" src="H:\MY Programing projects\web projects\buttons/submit.png" alt="submit" width="80" height="30">
+</form>
+<hr>
+
+
+<!-- input type: "button" displays a push button but with no predetermined behavior. This means that like with the image-input type, you need to speify the function to perform when it is activated.-->
+<font color="red"><h2> "button" input type to add button </h2></font>
+<form action="text.html">
+<input type="button" value="show Message" onclick="alert ('This message is dispalyed using a javascript function.')">
+</form>
+<hr>
+
+
+
+
+<!-- Input type: "file" displays a single-line text field and a browse button to allow users to select files for uploading.It has two attributes.-->
+<!-- The "select attribute specifies that the file types expected re jpeg and png image files.-->
+<!-- The multiple attribute specifies that many files can be selected for upload.-->
+<font color="red"><h2> "file" input type with accept and multiple attributes </h2></font> 
+<form>
+<p>Select file:</p>
+<input type="file" name="imagefile" accept="image/jpeg,image/png" multiple>
+</form>
+<hr>
+
+
+<!-- Input Type: color allows you to display a color well (i.e., color picker), which allows a user to select a color for an element.
+< Attributes supported by color input type are , "name", "value", "disabled", "form", "autofocus", "autocomplete" and "list" -->
+<font color="red"><h2>input type: "color" to select colors</h2></font>
+<form>
+Please select color:<input type="color" name="user_color">
+</form>
+<hr>
+
+
+
+<!-- <textarea> element is used to allows you to display a control that allows users to enter multiple lines of plain text,as opposed to the single line allowed by the text-input types.-->
+<!-- "name" attribute specifies a unique name for element.-->
+<!-- "value" attribute specifies the default value for element.-->
+<!-- "rows" attribute specifies the minimum number of lines to show.Default is 2.-->
+<!-- "cols" specifies the number of characters per line to show. Default is 20.-->
+<!-- "placeholder" gives an instruction or an example to user about what ot enter in a text area.-->
+<font color="red"><h2>textarea element with name, value, rows, placeholder and cols attribute</h2></font>
+<form>
+<p>Write your opinion:</p>
+<textarea name="opinions" rows="5" cols="10" placeholder="Write your opinions">
+</textarea>
+</form>
+<hr>
+
+
+<!-- "maxlength" specifies the miximum nmber of characters allowed in a text field.-->
+<!-- "minlength" specifies the minimum number of characters allowed in a text field.-->
+<!-- "form" specifes the id value of the <form> elemnt with which to associate element. It allows <input> elements to be placed anywhere within a document and not just within the <form>element.-->
+<!-- "required" specifies that element must have an input. It can be specified by itself, without a value.-->
+<font color="red"><h2>text area element of form with maxlength, minlength, form and required attributes</h2></font>
+<form action="text.html">
+<p>Write your opinion:</p>
+<textarea name="opinions" maxlength="100" minlength="20" id="opinions" required>
+</textarea>
+<input type="submit" value="submit">
+</form>
+<hr>
+
+
+<!-- "autofocus" attribute specifies that element should be given focus when page is loaded.It can be specified by itself.-->
+<!-- "autocomplete" attribute specifies whether or not browser should remember best match to automatically complete a field or offer them as options as the user starts to complete the field. The value taken are "on" and "off"-->
+<font color="red"><h2>text area element of form with autofocus and autocomplete attributes</h2></font>
+<form action="text.html">
+<p>Write your opinion:</p>
+<textarea autocomplete="on">
+</textarea>
+<input type="submit" value="submit">
+</form>
+<hr>
+
+<!-- Tex text in a text area with wrap="hard will contain newlines (if any)  when submitted in a form -->
+<!-- "spellcheck" specifies to check element's spelling an grammar.The values that it takes are true and false and default. -->
+<!-- "wrap" specifies whether or not inputted text should be wrapped when submitted. Its value cang be soft(which means it is not to be wrapped) or hard(which means it is to be wrapped). If hard is specified then the dirname attribut must be used to specify at which character to apply wrapping.-->
+<!-- "dirname" attribute enables the submission of the text direction of the textarea. The dirname attribute's value is always the name of the textarea, followed by ".dir".-->
+<font color="red"><h2> textarea element of form with spellcheck, wrap and dirname attributes</h2></font>
+<form action="#">
+<p>Please give us your comments below:</p>
+<textarea name="comment" wrap="hard" dirname="comment.dir" row="2" cols="20">At W2Schools you will find free
+  web-building tutorials
+  </textarea>
+</form>
+<hr>
+
+
+<!-- The <select> element is used to create a drop-down list. -->
+<!-- "Option" tag defines an option in a select list.<option> elements go inside a <select> or <datalist> element.  -->
+  <!-- multiple specifes to allow one or more options to be selected. -->
+<font color="red"><h2>"Select" element and "Option element"</h2></font>
+<select name="list" id="dropdown">
+  <optgroup label="Sci-Fi">
+<option value="volvo">volvo</option>
+<option value="saab">Saab</option>
+</optgroup>
+<optgroup label="Cars">
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+</optgroup>
+</select>
+<hr>
+
+
+<!-- The size attribute set that how many options should be shown in dropdown menu. -->
+<!-- The selected attribute in select tag specifies that the option is selected by the browser and if anyone not select the option then the selected option will be send to the server. -->
+<p>select tag with size attribute</p>
+<select name="list" id="dropdown" size="3">
+  <optgroup label="Sci-Fi">
+<option value="volvo" selected>volvo</option>
+<option value="saab">Saab</option>
+</optgroup>
+<optgroup label="Cars">
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+</optgroup>
+</select>
+<hr>
+
+<!-- the multiple attribute in select tag give oppertunity to select multiple option at a time. -->
+<p>select tag with multiple attribute</p>
+<select name="list" id="dropdown" multiple>
+  <optgroup label="Sci-Fi">
+<option value="volvo">volvo</option>
+<option value="saab">Saab</option>
+</optgroup>
+<optgroup label="Cars">
+<option value="mercedes">Mercedes</option>
+<option value="audi">Audi</option>
+</optgroup>
+</select>
+<hr>
+
+
+<!-- The <datalist> tag specifies a list of pre-defined options for an <input> element. The <datalist tag is used to provide an "autocomplete" feature on <input> elements. Users will see a drop-down list of pre-defined options as tey input data. -->
+  <font color="red"><h2>An input element with pre-defined values in a "datalist"</h2></font>
+<input type="text" name="browser" list="browsers" placeholder="select the area">
+<datalist id="browsers" >
+<option value="Internet explorer">
+<option value="Safari">
+<option value="chrome">
+<option value="Firefox">
+<option value="Opera">
+</datalist>
+<hr>
+
+
+<!-- The <progress> element allows you to display a control to show the progress of a task. The display is static and shows only a snapshot rather that a continuous display.Use the <progress tag in conjunction with JavaScript to display the progress of a task. The <progress tag is not suitable for representing a gauge( disc space usage or relevance of a query result).  -->
+<!--The "value" attribute (which specifies the amount of task completed) -->
+<!-- The "max" attribute specifies the total amount of task available to do. -->
+<font color="red"><h2>"progress element to show progress of task</h2></font>
+<p>Form progress element</p>
+<form>
+<p>Progress: <progress value="80" max="100"></p>
+</form>
+<hr>
+
+<!-- The <meter> element is used to display a control that shows a gauge. Note that its function is different from that of the <progress> element and should be seen as displaying a measure of fullness, emptiness of capacity, speed and son on. -->
+  <font color="red"><h2>"meter" element to display a control that shows a gausge.</h2></font>
+  <p>Display a gauge:</p>
+  <meter value="2" min="0" max="10">2 out of 10</meter><br>
+  <meter value="0.6"></meter><span>60%</span>
+<br>
+
+
+<!-- The <output tag represents the represents the result of a calculation(like one performed by a script). The java script is necessary to use it. -->
+  <!-- The "name" attribute specifies the name for element -->
+  <!-- The "for" attribute specifies in a space-separated list the id values of elements used in a calculation. -->
+  <!-- The "form" attribute specifies the id value on the form with which to associate element. -->
+<font color="red"><h2>output tag to show the result of calculation.</h2></font>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+<input type="range" id="a" value="50">100 + <input type="number" id="b" value="50">=<output name="x" for="a b"></output>
+</form>
+<hr>
+
+
+<!-- The <label> tag defines a label for an <input> element. The <label>element does not render as anything special for the user. However, it provides a usibility improvement for mouse users, because it the user clicks on the text within the <label> element, it toggles the control.The for attribute of the <label> tag should be equal to the id attribute of the related element to bind them together.-->
+<font color="red"><h2>"label" element</h2></font>
+<form>
+Please enter details:
+<p><label>Username:</label><input type="text" name="uname"></p>
+<p><label>Password:<input type="password" name="password"></label></p>
+<p><label for="email">Email:</label><input type="email" name="email" id="email"></p> <!--for attribute specifies which form element a lable is bound to-->
+<p><label for="phone">Phone:<input type="tel" name="phone" id="phone"></label></p>
+</form> <!--Form specifies one or more forms the lable belongs to.-->
+<hr>
+
+<p>Form aria-label</p>
+<form>
+<input type="text" name="search" aria-label="Search">
+<button type="submit">Search</button>
+</form>
+<hr>
+
+
+<!-- The <fieldset> tag is used to group related elements in a form. The <legend> element adds caption to the border to describe the content of the group. While the <legend> element has no native attributes, the <fieldset> element takes the three attributes.The legend should be brief and descriptive, especially because screen readers usually read it out for each control in the fieldset. -->
+  <font color="red"><h2>"fieldset" and "legend" elements to </h2></font>
+<form>
+<fieldset>
+  <legend>Fill personal information</legend>
+  Name: <input type="text"><br>
+  Email: <input type="emali"><br>
+  Date of birth: <input type="date">
+</fieldset>
+</form>
+<hr>
+
+
+<p><b>forms</b></p>
+<p>Please complete the form below:</p>
+<form>
+  <fieldset>
+    <legend>Personal info</legend>
+    <p>First name:<input type="text" name="fname" required><br></p>
+    <p>Last name:<input type="text" name="lname" required><br></p>
+   <p> Email:<input type="email" name="email" required><br></p>
+    <p>Your personal URL (if any): <input type="url" name="web"><br></p>
+    <input type="radio" value="gender" name="male">Male
+    <input type="radio" value="gender" name="female"> Female
+  </fieldset>
+  <fieldset>
+    <legend>Other info</legend>
+    <p>Which of these do you own?</p>
+    <p><input type="checkbox">Car
+    <input type="checkbox">Bike</p>
+  </fieldset>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

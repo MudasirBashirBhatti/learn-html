@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head><title>all about Lists, Tables and Links in html</title>
+<body>
+<!-- Lists are used to create lists in websites.There are two types of lists ordered lists and unordered lists.-->
+<hr>
+<marquee><font color="blue"><h1>Lists</h1><font></marquee>
+<hr>
+
+<!-- Unordered list is used to create lists without giving them order. -->
+<font color="red"><h2>Unorderd list"ul"</h2></font>
+<p>Simple unordered list</p>
+<ul>
+<li>Mudasir</li>
+<li>Mubasir</li>
+<li>Muammir</li>
+</ul>
+<hr>
+
+
+<!-- nested unordered list is used to create inside of a list.-->
+<p>nested unordered list</p>
+<ul>
+<li>Vehicles</li>
+<li>Planes</li>
+
+<ul>
+<li>Boing</li>
+<li>Airbus</li>
+</ul>
+
+<li>Bikes</li>
+</ul>
+<hr>
+
+
+<!-- default ordered list gives the item a number or an alphabatical order by default.-->
+<font color="red"><h2>orderd list"ol"</h2><a name="ordered"></a></font>
+<p>Default ordered list</p>
+<ol>
+<li>Mudasir</li>
+<li>Mubasir</li>
+<li>Muammir</li>
+</ol>
+<hr>
+
+
+<!-- ordered list with start attribute gives the numbering from where to start like start from 4,5 or 6 -->
+<p> ordered list with start attribute</p>
+<ol start="4">
+<li>Train</li>
+<li>Bus</li>
+<li>Aeroplane</li>
+</ol>
+<hr>
+
+
+
+<!-- ordered list with type attribute gives the type of numbering like 1,i,I,a,A -->
+<p> ordered list with type attribute</p>
+<ol type="A">
+<li>Train</li>
+<li>Bus</li>
+<li>Aeroplane</li>
+</ol>
+<hr>
+
+
+
+<!-- nested ordered list give the ordered list inside another ordered list -->
+<p>nested ordered list</p>
+<ol>
+<li>Vehicles</li>
+<li>Planes</li>
+
+<ol type="a">
+<li>Boing</li>
+<li>Airbus</li>
+</ol>
+
+<li>Bikes</li>
+</ol>
+<hr>
+
+
+
+
+
+
+<marquee><font color="blue"><h1>Tables</h1><font></marquee>
+<hr>
+
+<!-- <tr> tag is used for table row by which we can add any word into the applied row tag. <th> tag is used for table heading and it is always in center. <td> tag is used to add data in any given row.-->
+<font color="red"><h2> table main tags "th" , "tr" and "td"</h2></font>
+<table border="1">
+<tr>
+<th>Mobiles</th>
+<th>Cables<th>
+</tr>
+
+<tr>
+<td>3 Mobiles</td>
+<td>4 Cables</td>
+</tr>
+</table>
+<hr>
+
+
+
+<!-- summary attribue is used in table tag to provide additional information to browser about table.-->
+<font color="red"><h2> summary attribute "summary"</h2></font>
+<p> This attribute is used to provide additional information about table.</p>
+<table border="1" summary="this table is about one">
+<tr><td>One</td><td>Two</td></tr>
+</table>
+<hr>
+
+
+
+<!--  <caption> is used to add caption which is just like the title of the table. it is always inside the table tag -->
+
+<font color="red"><h2> caption tag inside the table tag "caption"</h2></font>
+<table border="1">
+<caption>My Table</caption>
+
+<tr>
+<td>3 Mobiles</td>
+<td>4 Cables</td>
+</tr>
+</table>
+<hr>
+
+<!-- <colspan> attribute is used to merge to column into one.-->
+
+<font color="red"><h2> colspan atribue inside the td tag "colspan"</h2></font>
+<table border="1">
+<tr>
+<td>column 1</td>
+<td>column 2</td>
+</tr>
+
+<tr>
+<td colspan="2">1+2</td>
+</tr>
+</table>
+<hr>
+
+
+<!-- <rowspan> attribue is used to merge to rows into one. -->
+<font color="red"><h2 id="rowspan"> rowspan atribue inside the td tag "rowspan"</h2></font>
+<table border="1">
+<tr>
+<td rowspan="2">hello world</td>
+<td>col 1</td>
+</tr>
+
+<tr>
+<td>col3</td>
+</tr>
+</table>
+<hr>
+
+
+
+<!-- apply cospan and rowspan attribute in one table.-->
+<font color="red"><h2> rowspan and colspan atribue inside the td tag in one table "rowspan" "colspan"</h2></font>
+<table border="1">
+    <tr>
+    <td rowspan="2"></td>
+         <th colspan="4"><div>Introduction to Web Design</div><br><font size="2">Academic Session 2015/2016</font></th>
+    </tr>
+    
+    <tr>
+    <th>No of years</th>
+    <th>Courses</th>
+    <th>Weeks</th>
+    <th>Project</th>
+    </tr>
+    
+    <tr>
+    <th>Day</th>
+        <td>1</td>
+        <td>Mixed</td>
+        <td rowspan="2">13</td>
+        <td rowspan="2">Yes</td>
+    </tr>
+    
+    <tr>
+    <th>Evening</th>
+        <td>2</td>
+        <td>Mixed</td>
+    </tr>
+    
+    <tr>
+    <td colspan="5"><b>Enjoy the unit!</b></td>
+    </tr>
+    
+    </table>
+<hr>
+
+
+
+<!-- Always write head of table in <thead> section so that the browser can understand it.
+     Always write body of table in <tbody> section or tag to understand the browser well.
+     Always write footer of table in <tfoot> section or tag to understand the browser well that which part of table is footer.-->
+
+<font color="red"><h2> table head, table body and table footer tags "thead" "tbody" "tfoot"</h2></font>
+<table border="1" header="This is my first website">
+
+<theads>
+<tr>
+<th>Date</th>
+<th>Income</th>
+<th>Expenditure</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<th>1<sup>st</sup> January</th>
+<td>250</td>
+<td>36</td>
+
+<tr>
+<th>1<sup>st</sup> January</th>
+<td>250</td>
+<td>36</td>
+
+<tr>
+<th>1<sup>st</sup> January</th>
+<td>250</td>
+<td>36</td>
+
+</tbody>
+
+<tfoot>
+
+<tr>
+<td></td>
+<td>7824</td>
+<td>1241</td>
+</tfoot>
+
+</table>
+<hr>
+
+
+
+
+<!-- <col> tag is specifies column properties for each column within a <colgroup> element. In HTML the <col> tag has no end tag.it is an indent tag.
+here we use two attributes.span attributes specifies number of column. style applies the color to columns.-->
+
+<font color="red"><h2>colgroup and col tags "colgroup" "col"</h2></font>
+<p>col tag is used inside the colgroup tag.<br>
+We can get the same results using colgroup only but colgroup is used only apply limited</p>
+
+<table border="1">
+<colgroup>
+<col span="2" style=background-color:red;>
+<col span="1" style=background-color:yellow;>
+<tr><td>hello 1</td><td>hello 2</td><td>hello 3</td></tr>
+<tr><td>world 1</td><td>world 2</td><td>world 3</td></tr>
+</table>
+<hr>
+
+
+
+<!-- The scope attribute specifies whether a header cell is a header for a column, row or group of columns or rows.
+The scope attribute has no visual effect in ordinary web browsers, but can be used by screen readers. It has four values col, row, rowgroup and cologroup.It defines whether the header defined in the <th>
+element is for a row, column, or a group of rows or columns.-->
+
+<font color="red"><h2>scope attribute "scope"</h2></font>
+<p>it is always used in "th" tag.</p>
+<table border="1">
+<tr>
+<th></th>
+<th scope="col">Month</th>
+<th scope="col">Savings</th>
+</tr>
+<tr>
+<td>1</td><td>January</td><td>$100</td>
+<tr>
+<tr>
+<td>2</td><td>February</td><td>$200</td>
+<tr>
+</table>
+<hr>
+
+
+<!-- Notice that as with the scope attribute, the id and headers attributes do not affect the display of a table. Again, note that the border has been added by using CSS. --> 
+
+<font color="red"><h2>accesibility, id and headers attributes</h2></font>
+<table border="1">
+<caption>Accessibility, id and headers</caption>
+<tr>
+<th rowspan="2" id="c">Coursework</td>
+<th colspan="2" id="t">Tests</th>
+<th colspan="2" id="e">Exams</th>
+
+<tr>
+<th id="t1" headers="t">1</th>
+<th id="t2" headers="t">2</th>
+<th id="t3" headers="e">1</th>
+<th id="t4" headers="3">2</th>
+<tr>
+
+<tr>
+<td headers="c">20%</td>
+<td headers="tt1">10%</td>
+<td headers="tt2">10%</td>
+<td headers="ee1">30%</td>
+<td headers="ee2">30%</td>
+<tr>
+</table>
+
+<hr><hr>
+
+<marquee><font color="blue"><h1>Links</h1><font></marquee>
+<hr>
+
+<!-- This is how to link to another webpage.Link text should be meaningful.Good: “See the Information page to know more about…”
+Not ideal: “To know more, click here to go to the Information page” Poor: “Click here for more.” -->
+
+<font color="red"><h2>Link another website.</h2></font>
+<a href="https:// www.movies.com">Movies</a><br>
+<a href="https:// www.google.com">Google</a>
+<hr>
+
+
+
+<!-- Linking a page to another page on the same website is similar to linking to another website, except that you do not need to specify an absolute address.-->
+
+<font color="red"><h2>Link to another page on the same website</h2></font>
+<p>click <a href="text.html" target="_blank">here</a> to visit my text page.</p> 
+<hr>
+
+<!--Linking to another part of the same page is known as within-page linking and uses the same underlying principle as linking to a whole page, except that the
+points to which to link first have to be identified, after which the anchor element is used to link to them. The points are identified by using the id or name attribute.-->
+
+<font color="red"><h2>Link to another part on the same page.</h2></font>
+<p><b>using the id attribute.</b></p>
+<p>visit rowspan from <a href="#rowspan">here </a></p>
+<hr>
+
+
+<p><b>using the name attribute.</b></p>
+<p>visit ordered list from <a href="#ordered">here </a></p>
+<hr>
+
+
+
+<!-- Linking to a specific part on another page.-->
+<font color="red"><h2>Linking to a specific part on another page</h2></font>
+<p><a href="text.html#q">Quote</a> section on an other page of same website.</p>
+<hr>
+
+<!-- by applying this program we will be able to add email address of mine using link. So that anyone can send me email easily.-->
+<font color="red"><h2>Linking to an E-Mail Program:</h2></font>
+<p>Email Link</p>
+<p>Email me at:<a href="mailto.joe@example.com">Joe@example</a></p>
+<hr>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

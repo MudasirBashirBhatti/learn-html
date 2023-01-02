@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>all about Images in html</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <!-- The <img> tag defines an image in an HTML page. The <img> tag has two required attributes: src and alt-->
+    <!-- The "src" attribute defines the source of the image -->
+    <!-- The "alt" attribute has a text that will show only when the image will not open due to some reasons -->
+    <!-- The "title" attribute add the title of the image which will show when we hover the mouse over image. -->
+    <!-- The "width attribute define the width and "height" attribute define the height of the image. -->
+    <!-- The <picture>  element is a container that allows multiple image sources to be specified, from which one is chosen to use with the contained <img> element. -->
+
+    <marquee>
+        <font color="blue">
+            <h1>All about Images</h1>
+        </font>
+    </marquee>
+    <font color="red">
+        <h2>"img" and "src" elements to embedd image</h2>
+    </font>
+    <p>Image element</p>
+    <img src="images/1.jpg" alt="poetry" title="A poetry image" width="100" height="100">
+    <img src="Images/2.jpg" alt="poetry" title="The second poetry image" width="100" height="100">
+    <hr>
+
+    <!-- The <picture> tag gi s web developers more flexibility in specifying image resources. The most commone use of the <picture> element will be for art direction in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport.  -->
+    <!--  The <picture element holds two different tags: one or more <source> tags and one<img> tag. The <source> element has the following attributes:-->
+    <!-- (1)srcset(required) - defines the URL of the image to show
+     (2) "media" - accepts any valid media query that would normally be difened in a CSS.
+     (3) "sizes"- defines a single width descriptor, a single media query with width descriptor, or comma-delimited list of media queries with a width descriptor
+     (4) "type" defines the MIME type   -->
+    <font color="red">
+        <h2>"picture and "source" elements with srcset attribute.</h2>
+    </font>
+    <p>The images will changes according to the sizes</p>
+    <picture>
+        <source media="(min-width:650px)" srcset="images/3.jpg" width="100" height="100">
+        <source media="(min-width:465px)" srcset="images/4.jpg" width="100" height="100">
+        <img src="images/5.jpg" alt="Poetry" style="width: auto;" width="100" height="100">
+    </picture>
+    <hr>
+
+
+    <!-- The <canvas> tag is used to draw graphics, on the fly, via scripting(usually JavaScript). The <canvas> tag is only a container for graphics, you must use a script to acturally draw the graphics. -->
+    <font color="red">
+        <h2>"canvas element for incorporating image in a web page.</h2>
+    </font>
+    <p>"canvas" element used to draw graphics by using scripting.</p>
+    <canvas id="myCanvas">Your browser does not support canvas </canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 80, 100);
+    </script>
+    <hr>
+
+    <!-- The first anchor used to add the image as a link in website. -->
+    <!-- The second anchor show when we click on text it will send us to the image. -->
+    <font color="red">
+        <h2>Making an image a Link, and Linking to an Image</h2>
+    </font>
+    <a href="https://www.google.com" target="_blank"><img src="images/7.jpg" alt="poetry" title="Click to browse google"
+            width="100" height="100"></a><br>
+    <a href="images/6.jpg" width="100" height="100" target="_blank">Poetry picture</a>
+    <hr>
+
+
+    <!-- The <figure> tag specifies self-contained content, like diagrams and phots. While the content of the <figure> element is related to the main flow, its position is independent of the main flow, and if removed it should not affect the flow of the doucument -->
+    <!-- The <figcaption> element can be placed as the first or last child of the <figure> element. -->
+    <font color="red">
+        <h2>"figure" and "figcaption" elements of the image.</h2>
+    </font>
+    <figure>
+        <img src="images/1.jpg" alt="Poetry" width="100px" height="100px">
+        <figcaption>Fig.1 The poetry image</figcaption>
+    </figure>
+    <hr>
+
+
+    <font color="red">
+        <h2>Specifying Multiple Image Sources</h2>
+    </font>
+    <p>Specifying for different device pixel ratios.</p>
+    <img src="images/1.jpg" alt="poetry" srcset="images/2.jpg 1.5x" width="100px" height="100px">
+    <hr>
+
+
+    <!-- The HTML <map> element is used with <area> elements to define an image map (a clickable link area). "usemap" attribute used with the img element to specify the name of the image map to use with an image to pruduce and image map -->
+    <font color="red">
+        <h2>"map" and and area element</h2>
+    </font>
+    <img src="buttons/google and facebook.png" alt="Youtube and facebook" width="600px" usemap="#youtube_facebook">
+    <map name="youtube_facebook">
+        <area shape="rect" coords="275,63,598,246" href="https://www.youtube.com" alt="youtube"
+            title="click here to visit youtube">
+        <!--first select left x-axis then top y-axis then right x-axis and then bottom y axis for rect coordinates-->
+        <area shape="circle" coords="134,151,109" href="https://www.facebook.com" alt="facebook" title="visit facebook">
+        <!--for circle first get the center cordinates of x and y axis. then subtract the coordinates of left x axis from left x-axis. After that divide by 2 for radius and right the radious -->
+        <area shape="poly" coords="201,13,37,31,285,12,237,104,234,49,215,57"
+            href="https://www.google.com/what is polygon" alt="polygon" title="What is polygon?">
+        <!--for polygon (x,y,x,y,x,y,.....nxy)-->
+    </map>
+    <hr>
+
+<!-- The <iframe> tag specifies an inline frame. An inline frame is used to embed another document within the curren HTML document. -->
+    <font color="red">
+        <h2>"iframe" element to embedd an other file or website.</h2>
+    </font>
+<iframe src="files/1 file.pdf" frameborder="1" width="200px" height="200px" name="a pdf file" ></iframe>&nbsp;&nbsp;&nbsp;
+<iframe src="https://googlemap.com" frameborder="0" width="200px" height="200px" name="google map"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
